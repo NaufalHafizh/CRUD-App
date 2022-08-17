@@ -47,5 +47,47 @@
                 @endforeach
             </tbody>
         </table>
+        <div class="row mt-5">
+            <div class="col">
+                <h2 class="pb-2 mb-4 text-light border-bottom border-light">Data Kategori</h2>
+                <table class="table table-light">
+                    <thead>
+                        <tr class="table-success">
+                            <th scope="col">NO</th>
+                            <th scope="col">Kategori</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                        @foreach ($kategori as $d)
+                            <tr>
+                                <th>{{ $loop->iteration }}</th>
+                                <th>{{ $d->nama }}</th>
+                                </form>
+                                </th>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+            <div class="col">
+                <h2 class="pb-2 mb-4 text-light border-bottom border-light">Data Pelaksanaan</h2>
+                <table class="table table-light">
+                    <thead>
+                        <tr class="table-success">
+                            <th scope="col">NO</th>
+                            <th scope="col">Pelaksanaan</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider">
+                        @foreach ($pelaksanaan as $d)
+                            <tr>
+                                <th>{{ $loop->iteration }}</th>
+                                <th>{{ $d->nama }}</th>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
 @endsection

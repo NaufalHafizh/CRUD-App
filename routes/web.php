@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Home;
+use App\Http\Controllers\Kategori_C;
 use Illuminate\Support\Facades\Route;
 
 /*

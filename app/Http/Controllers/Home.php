@@ -19,7 +19,9 @@ class Home extends Controller
         $data = [
 
             'title' => "Crud App | Home",
-            'event' => Event::all()
+            'event' => Event::all(),
+            'kategori' => Kategori::all(),
+            'pelaksanaan' => Pelaksanaan::all()
 
         ];
 
@@ -130,5 +132,27 @@ class Home extends Controller
     {
         Event::destroy($home->id);
         return redirect('/home')->with('berhasil', 'Data Berhasil Dihapus');
+    }
+
+
+
+    public function createkategori()
+    {
+        $data = [
+            'title' => "Create Kategori"
+        ];
+
+        return view('Kategori.Create', $data);
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function storekategori(Request $request)
+    {
+        //
     }
 }
